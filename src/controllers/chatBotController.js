@@ -183,19 +183,19 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
+        callSendAPI(sender_psid,`ce Bot a besoin d'entrainement` );
     }else{
        if(entityChosen === "wit$greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Hi there! This bot is created by Hary Pham. Watch more videos on HaryPhamDev Channel!');
+           callSendAPI(sender_psid,'Salut ce bot a etait cree par Access!');
        }
        if(entityChosen === "wit$thanks"){
            //send thanks message
-           callSendAPI(sender_psid,`You 're welcome!`);
+           callSendAPI(sender_psid,`Soyez le bienvenu`);
        }
         if(entityChosen === "wit$bye"){
             //send bye message
-            callSendAPI(sender_psid,'bye-bye!');
+            callSendAPI(sender_psid,'bye!');
         }
     }
 }
@@ -215,7 +215,7 @@ let callSendAPIWithTemplate = (sender_psid) => {
                     "elements": [
                         {
                             "title": "Want to build sth awesome?",
-                            "image_url": "https://www.nexmo.com/wp-content/uploads/2018/10/build-bot-messages-api-768x384.png",
+                            "image_url": "https://scontent.ftun9-1.fna.fbcdn.net/v/t1.6435-9/49585656_2418046621599161_6183635050806902784_n.png?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=wX3tzlAPCQ4AX8xLAMR&_nc_ht=scontent.ftun9-1.fna&oh=00_AT9FrqC_G5_wfRMr0VdIgjWUzw1nStBQRRmdqpgTwyr02A&oe=63270558",
                             "subtitle": "Watch more videos on my youtube channel ^^",
                             "buttons": [
                                 {
