@@ -183,11 +183,11 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`ce Bot a besoin d'entrainement` );
+        callSendAPI(sender_psid,`Ce Bot à besoin d'entraînement` );
     }else{
        if(entityChosen === "wit$greetings"){
            //send greetings message
-           callSendAPI(sender_psid,'Salut ce bot a etait cree par Access!');
+           callSendAPI(sender_psid,'Salut ce bot a été créé par access !');
        }
        if(entityChosen === "wit$thanks"){
            //send thanks message
@@ -195,7 +195,15 @@ function handleMessage(sender_psid, message) {
        }
         if(entityChosen === "wit$bye"){
             //send bye message
-            callSendAPI(sender_psid,'bye!');
+            callSendAPI(sender_psid,'Bye');
+        }
+        if(entityChosen === "wit$bye"){
+            //send bye message
+            callSendAPI(sender_psid,'Adresse mail confirmé');
+        }
+        if(entityChosen === "wit$phone_number"){
+            //send bye message
+            callSendAPI(sender_psid,'Numéro de telephone confirmé');
         }
     }
 }
