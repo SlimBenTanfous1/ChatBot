@@ -1,8 +1,6 @@
 import express from "express";
 
-/*
-Config view engine for node app
- */
+
 
 let configViewEngine = (app) => {
     app.use(express.static("./src/public"));
