@@ -197,7 +197,7 @@ function handleMessage(sender_psid, message) {
             //send bye message
             callSendAPI(sender_psid,'Bye');
         }
-        if(entityChosen === "wit$bye"){
+        if(entityChosen === "wit$email"){
             //send bye message
             callSendAPI(sender_psid,'Adresse mail confirmé');
         }
