@@ -121,9 +121,9 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'yes') {
-        response = { "text": "Thanks!" }
+        response = { "text": "Merci!" }
     } else if (payload === 'no') {
-        response = { "text": "Oops, try sending another image." }
+        response = { "text": "Oops, essayer une autre image." }
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
@@ -166,7 +166,7 @@ function handleMessage(sender_psid, message) {
     //handle message for react, like press like button
     // id like button: sticker_id 369239263222822
 
-    let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye" ];
+    let entitiesArr = [ "wit$greetings", "wit$thanks", "wit$bye","wit$email","wit$phone_number" ];
     let entityChosen = "";
     entitiesArr.forEach((name) => {
         let entity = firstTrait(message.nlp, name);
@@ -192,11 +192,11 @@ function handleMessage(sender_psid, message) {
             callSendAPI(sender_psid,'Bye');
         }
         if(entityChosen === "wit$email"){
-            //send bye message
+            //send email confirmé
             callSendAPI(sender_psid,'Adresse mail confirmé');
         }
         if(entityChosen === "wit$phone_number"){
-            //send bye message
+            //send phone number
             callSendAPI(sender_psid,'Numéro de telephone confirmé');
         }
     }
