@@ -113,19 +113,18 @@ let getWebhook = (req, res) => {
 // }
 
 // Handles messaging_postbacks events
-function handlePostback(sender_psid, received_postback) {
+function handlePostback(sender_psid, recieved_postback){
     let response;
 
-    // Get the payload for the postback
-    let payload = received_postback.payload;
+    //Get The Payload For The Postback
+    let payload = recieved_postback.payload;
 
-    // Set the response based on the postback payload
-    if (payload === 'yes') {
-        response = { "text": "Merci!" }
-    } else if (payload === 'no') {
-        response = { "text": "Oops, essayer une autre image." }
+    // Set The Response Based On The Postback Payload
+    if (payload === "yes"){
+        response = {"text": "Oops, essayer avec une autre image"}
     }
-    // Send the message to acknowledge the postback
+
+    // Send The Message To Acknowledge the postback
     callSendAPI(sender_psid, response);
 }
 
